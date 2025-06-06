@@ -1,3 +1,6 @@
-# Create class Classroom
+class OpenSpace:
+    """
+    This is a classroom...
+    """
 
-
+    pass
