@@ -32,9 +32,15 @@ class OpenSpace:
     def display(self):
         # Display the different tables and there occupants
         # in a nice and readable way
+        total_seats = 0
+        total_available_seats = 0
+
         table_number = 1
 
         for table in self.tables:
+
+            total_seats += len(table.seats)
+            total_available_seats += table.left_capacity()
 
             print(f"=== TABLE {table_number} ===")
 
@@ -45,3 +51,7 @@ class OpenSpace:
                 seat_numer += 1    
 
             table_number += 1
+
+        print(f"Total people today: {total_seats - total_available_seats}")
+        print(f"Total seats: {total_seats}")
+        print(f"Available seats: {total_available_seats}")
