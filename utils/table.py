@@ -29,3 +29,19 @@ class Table:
 
     def __str__(self) -> str:
         return f"Table has {len(self.seats)} seats"
+
+    def has_free_spot(self) -> bool:
+        return self.left_capacity() > 0
+    
+    def assign_seat(self, name):
+        for seat in self.seats:
+            if seat.free:
+                seat.set_occupant(name)
+                break
+
+    def left_capacity(self, ) -> int:
+        free_seats = 0
+        for seat in self.seats:
+            if seat.free:
+                free_seats += 1
+        return free_seats

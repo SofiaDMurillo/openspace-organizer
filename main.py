@@ -14,11 +14,14 @@ from utils.table import Table
 
 #print(read_colleagues_from_file("inputs/colleagues.csv"))
 
-sample_table = Table(5)
+sample_table = Table(4)
 print(sample_table)
 
-sample_table.seats[0].set_occupant("Sofia")
-sample_table.seats[1].set_occupant("Alberto")
+sample_table.assign_seat("Sofia")
+sample_table.assign_seat("Alberto")
+
+print(f"left capacity={sample_table.left_capacity()}")
+print(f"has free spot={sample_table.has_free_spot()}")
 
 for seat in sample_table.seats:
     print(seat)
