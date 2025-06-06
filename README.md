@@ -6,18 +6,21 @@ Version 1.0 of the tool, this version, will assign people to tables randomly. La
 
 The tool was developed in Python 3.12.3
 
-
 # Installation
+
 The following files are required to run the Openspace organizer tool:
 
- 1. main.py
- 2. file_utils.py
- 3. openspace.py
- 4. table.py
+ 1. [main.py](main.py)
+ 2. [file_utils.py](utils/file_utils.py)
+ 3. [openspace.py](utils/openspace.py)
+ 4. [table.py](utils/table.py)
 
 # Usage
 1. Update the colleagues.csv file with the colleagues who are present today, and save it
-2. Run the Openspace organizer tool by opening file main.py and press Ctrl F5 or from the Terminal typing: python main.py
+2. Run the Openspace organizer tool by opening file [main.py](main.py) and press Ctrl F5 or from the Terminal typing: 
+```
+python main.py
+```
 
 # Contributors
 Alberto Perez, Sofia Murillo
