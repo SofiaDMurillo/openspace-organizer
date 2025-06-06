@@ -3,10 +3,11 @@ from utils.openspace import OpenSpace
 
 # Load the colleagues from the excel file defined in the config file
 colleagues = read_colleagues_from_file("./inputs/colleagues.csv")
-print(colleagues)
 
 # Launch the organizer
-open_space = OpenSpace(6, 5)
+num_tables = 6
+num_seats = 4
+open_space = OpenSpace(num_tables, num_seats)
 
 # Distribute the colleagues
 open_space.organize(colleagues)

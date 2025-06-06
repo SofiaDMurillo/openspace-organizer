@@ -1,27 +1,28 @@
 class Seat:
     """
-    This is a seat...
+    Class to represent a seat
     """
-
-    def __init__(self, occupant):
-        self.occupant = occupant
-        self.free = occupant == ""
-
-    def set_occupant(self, occupant):
-        self.occupant = occupant
-        self.free = False
-
-    def remove_occupant(self):
-        self.occupant = ""
-        self.free = True
 
     def __str__(self) -> str:
         return f"Free: {self.free} Occupant:{self.occupant}"
 
+    def __init__(self, occupant: str = ""):
+        self.occupant = occupant
+
+    @property
+    def free(self):
+        return self.occupant == ""
+
+    def set_occupant(self, occupant):
+        self.occupant = occupant
+
+    def remove_occupant(self):
+        self.occupant = ""
+
 
 class Table:
     """
-    This is a table...
+    Class to represent a table
     """
 
     def __init__(self, capacity):

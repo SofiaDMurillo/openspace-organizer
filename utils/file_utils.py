@@ -1,10 +1,12 @@
-# Create function to read input file
-
 def read_colleagues_from_file(file_path):
     """
-    This funtions reads colleague names from file...
-    param file_path
-    return list of names
+    This funtions reads colleague names from a file.
+
+    Parameters:
+        file_path (str): The path to the file containing the list of names
+
+    Returns:
+        The names in a list of strings
     """
     colleagues = []
 
