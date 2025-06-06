@@ -1,10 +1,10 @@
 # Openspace organizer project
-# Import everything you need to launch the organizer
-
+# Import file utils
 from utils.file_utils import read_colleagues_from_file
+# Import openspace, tables and seats
 from utils.table import Seat
+from utils.table import Table
 
-# Import openspace and import tables
 
 # Load the colleagues from the excel file defined in the config file
 
@@ -14,10 +14,14 @@ from utils.table import Seat
 
 #print(read_colleagues_from_file("inputs/colleagues.csv"))
 
-seat1 = Seat("Sofia")
-print(f"Is it free: {seat1.free}")
-print(f"who is in the seat: {seat1.occupant}")
-seat1.remove_occupant()
-print(f"Is it free: {seat1.free}")
-print(f"who is in the seat: {seat1.occupant}")
+sample_table = Table(5)
+print(sample_table)
+
+sample_table.seats[0].set_occupant("Sofia")
+sample_table.seats[1].set_occupant("Alberto")
+
+for seat in sample_table.seats:
+    print(seat)
+
+
 
