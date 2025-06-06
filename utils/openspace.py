@@ -30,15 +30,20 @@ class OpenSpace:
                 table_num = 0          
 
     def display(self):
-        # display the different tables and there occupants
+        # Display the different tables and there occupants
         # in a nice and readable way
         table_number = 1
+
         for table in self.tables:
+
             print(f"=== TABLE {table_number} ===")
+
             seat_numer = 1
+
             for seat in table.seats:
-                print(f"Seat: {seat_numer} Occupant:{seat.occupant}")
-                seat_numer += 1           
+                print(f"Seat {seat_numer}: {seat.occupant}")
+                seat_numer += 1    
+
             table_number += 1
 
     def store(self, filename):
