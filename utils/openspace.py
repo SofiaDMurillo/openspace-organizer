@@ -45,7 +45,3 @@ class OpenSpace:
                 seat_numer += 1    
 
             table_number += 1
-
-    def store(self, filename):
-        # TODO: store the repartition in an excel file
-        pass
